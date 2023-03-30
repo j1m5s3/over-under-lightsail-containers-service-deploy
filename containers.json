@@ -1,0 +1,21 @@
+{
+  "web": {
+    "image": ":over-under-api-container-service.over-under-api-nginx.0",
+    "command": [],
+    "ports": {
+      "80": "HTTP"
+    },
+    "environment": {
+      "NGINX_ENVSUBST_OUTPUT_DIR": "/etc/nginx",
+      "FLASK_HOST": "localhost",
+      "FLASK_PORT": "8000"
+    }
+  },
+  "over-under-api": {
+    "image": ":over-under-api-container-service.over-under-api-be.0",
+    "command": [],
+    "ports": {
+      "8000": "HTTP"
+    }
+  }
+}
